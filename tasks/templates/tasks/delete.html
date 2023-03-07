@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+  .btn{
+    margin: 2px;
+  }
+
+</style>
+
+<p class="text-center">
+     <blockquote class="blockquote">
+    <strong>Are you sure you want to delete</strong> <small class="text-muted">{{item}}</small>"?</p>
+
+<a class="btn btn-sm btn-info " href="{% url 'list' %}">Cancel</a>
+
+<form method="post" action="">
+    {% csrf_token %}
+    <input class="btn btn-sm btn-success " type="submit" name="Confirm">
+</form>
